@@ -58,10 +58,12 @@ FOR URLS IN A TEXT FILE:
 ```bash
 cat urls.txt | python path_to_tool/check.py 
 ```
+
 Example:
 
+```bash
 cat apple1.txt | python ~/Desktop/confusion-checker/check.py
-
+```
 
 
 FOR SINGLE LIVE DOMAIN:
@@ -69,10 +71,12 @@ FOR SINGLE LIVE DOMAIN:
 ```bash
 echo https://www.example1.com | python path_to_tool/check.py
 ```
+
 Example:
 
+```bash
 echo https://www.facebook.com | python ~/Desktop/confusion-checker/check.py
-
+```
 
 ### Example Output
 
