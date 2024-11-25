@@ -7,8 +7,9 @@
 **Dependency Confusion Checker** is a Python-based tool for identifying potential dependency confusion vulnerabilities in JavaScript (`package.json`) and Python (`requirements.txt`) projects. Dependency Confusion attack, is one critical vulnerability that could be potentially exploited by a malicious hacker. This form of 
 vulnerability occurs, when packages (known as dependencies) that are necessary for an application to execute have same naming convention on both the private and public
 repository of the author of the package. 
-By default, when certain commands like "pip install*" are executed to install packages, both private and public repositories are compared, and the most trusted repository (in this case the private repository) is selected, the package pulled into the users device, and gets installed. When there seems to be an overlapping in both repositories (public and private), the public becomes the selected. 
-The impact of the public being the selected, is that a malicious hacker could write a dependency, while assigning a value indicating the package to be a higher version aka latest version. When a user tries to install the requirements, the selected repository becomes that belonging to the malicious hacker. This certainly, would lead to whatever malicious intent the code embbeded in the package by the hacker, is instructed to do. In most cases users are injected with a backdoor, giving the malicious hacker unrestricted access to the impacted users device. 
+By default, when certain commands like "pip install*" are executed to install packages, both private and public repositories are compared, and the most trusted repository (in this case the private repository) is selected, the package pulled into the users device, and gets installed. 
+When there seems to be an overlapping in both repositories (public and private), the public becomes the selected. 
+The impact of the public being the selected, is that a malicious hacker could write a dependency, while assigning a value indicating the package to be a higher version aka latest version. If a user tries to install the requirements, the selected repository becomes that belonging to the malicious hacker. This certainly, would lead to whatever malicious intent the code embbeded in the package by the hacker, is instructed to do. In most cases users are injected with a backdoor, giving the malicious hacker unrestricted access to the impacted users device. 
 
 
 ## Features
@@ -27,7 +28,7 @@ The impact of the public being the selected, is that a malicious hacker could wr
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/confusion-checker.git
+   git clone https://github.com/fixitgearware/confusion-checker.git
    cd confusion-checker
    ```
 
